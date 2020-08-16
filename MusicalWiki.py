@@ -15,35 +15,35 @@ def main():
                     new = int(change['length']['new'])
                     diff = old - new
                     if diff >= 1000:
-                        player.play_note("C5", .3)
+                        player.play_note("C5", .2)
                         print("Edit adding more than 1,000 characters")
                     elif diff < 1000 and diff >= 10:
-                        player.play_note("B", .3)
+                        player.play_note("B", .2)
                         print("Edit adding between 10 - 1,000 characters")
                     elif diff < 10 and diff > 0:
-                        player.play_note("A", .3)
+                        player.play_note("A", .2)
                         print("Edit adding between 0 and 10 characters")
                     elif diff <= 0 and diff > -10:
-                        player.play_note("G", .3)
+                        player.play_note("G", .2)
                         print("Edit removing between 0 and 10 characters")
                     elif diff <= -10 and diff > -1000:
-                        player.play_note("F", .3)
+                        player.play_note("F", .2)
                         print("Edit removing 10 - 1,000 characters")
                     elif diff < -1000:
-                        player.play_note("E", .3)
+                        player.play_note("E", .2)
                         print("Edit removing more than 1,000 characters.")
                     else:
                         pass
                 elif change['type'] == "log" and change['wiki'] == "enwiki":
                     action = str(change['log_type']).upper()
                     if action == "BLOCK":
-                        player.play_note("D", .3)
+                        player.play_note("D", .2)
                         print("An account was blocked!")
                     elif action == "NEWUSER":
-                        player.play_note("C", .3)
+                        player.play_note("C", .2)
                         print("A new user created an account!")
                     else:
-                        play.play_note("C3", .3)
+                        play.play_note("C3", .2)
                         print("Some other log action happened")
             except BaseException:
                 pass
