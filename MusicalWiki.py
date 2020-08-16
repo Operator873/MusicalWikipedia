@@ -43,7 +43,7 @@ def main():
                         player.play_note("C", .1)
                         print("A new user created an account!")
                     else:
-                        play.play_note("C3", .1)
+                        player.play_note("C3", .1)
                         print("Some other log action happened")
             except BaseException:
                 pass
